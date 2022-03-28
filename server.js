@@ -1,4 +1,4 @@
-//NodeJS REST API using the 'express' library
+// CIT 270 Team Final - Reactless MERN Stack API
 
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -9,8 +9,6 @@ const req = require('express/lib/request');
 
 const app = express();
 const port = 443;
-
-app.use(express.static('public'));
 
 app.use(bodyParser.json());
 
