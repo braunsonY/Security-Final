@@ -21,11 +21,11 @@ app.post('/',(req,res) => {
 })
 
 app.post('/login',(req,res) => {
-    // if(req.body.userName == "" && crypto.createHash('sha256').update(req.body.password).digest('hex') == "") {
+    // if(req.body.userName == (username from mongo) && crypto.createHash('sha256').update(req.body.password).digest('hex') == passwd hash from mongodb) {
     //     res.send(''); // tokenized key
     // } else {
     //     res.status(401); // Unauthorized
-    //     res.send('invalid_user')
+    //     res.send('invalid user')
     // }
     res.send('');
 })
