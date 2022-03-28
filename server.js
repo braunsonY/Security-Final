@@ -34,7 +34,7 @@ app.post('/createuser',(req,res) => {
 })
 
 https.createServer({
-    key: fs.readFileSync('private.key'),
+    key: fs.readFileSync('server.key'),
     cert: fs.readFileSync('server.cert')
   }, app).listen(443, () => {
     console.log(`Server started at https://localhost:${port}`)
