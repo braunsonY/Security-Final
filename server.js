@@ -21,20 +21,16 @@ app.post('/',(req,res) => {
 })
 
 app.post('/login',(req,res) => {
-    if(req.body.userName == "sam" && crypto.createHash('sha256').update(req.body.password).digest('hex') == "181bd50ae63d9821d57cedbe4f1924a7cfe17a377b4e442c1cec30682e2934c9") {
-        res.send('sam');
-    } else {
-        res.status(401); // Unauthorized
-        res.send('invalid_user')
-    }
+    // if(req.body.userName == (username from mongo) && crypto.createHash('sha256').update(req.body.password).digest('hex') == passwd hash from mongodb) {
+    //     res.send(''); // tokenized key
+    // } else {
+    //     res.status(401); // Unauthorized
+    //     res.send('invalid user')
+    // }
+    res.send('');
 })
 app.post('/createuser',(req,res) => {
-    if(req.body.userName == "sam" && crypto.createHash('sha256').update(req.body.password).digest('hex') == "181bd50ae63d9821d57cedbe4f1924a7cfe17a377b4e442c1cec30682e2934c9") {
-        res.send('sam');
-    } else {
-        res.status(401); // Unauthorized
-        res.send('invalid_user') // Change to authorize user
-    }
+    // MongoDB implementation to create user
 })
 
 https.createServer({
