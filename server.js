@@ -6,9 +6,19 @@ const crypto = require('crypto');
 const https = require('https');
 const fs = require('fs');
 const req = require('express/lib/request');
+var mongo = require('mongodb');
 
 const app = express();
 const port = 443;
+var MongoClient = require('mongodb').MongoClient;
+var mongoUrl = "mongodb://localhost:27017/mydb";
+
+//Creation of Empty MongoDB database
+MongoClient.connect(mongoUrl, function(err, mongodb) {
+  if (err) throw err;
+  console.log("Database created!");
+  mongodb.close();
+});
 
 app.use(bodyParser.json());
 
@@ -38,7 +48,7 @@ app.post('/createuser',(req,res) => {
 })
 
 https.createServer({
-    key: fs.readFileSync('private.key'),
+    key: fs.readFileSync('server.key'),
     cert: fs.readFileSync('server.cert')
   }, app).listen(443, () => {
     console.log(`Server started at https://localhost:${port}`)
