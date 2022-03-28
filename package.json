@@ -9,6 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^4.4.1"
+    "body": "^5.1.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "mongodb": "^4.4.1",
+    "node": "^17.7.1",
+    "parser": "^0.1.4"
   }
 }

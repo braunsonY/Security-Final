@@ -12,3 +12,8 @@
 # git checkout main
 # git pull
 # git branch -d branchname
+
+# git checkout merge
+# git pull
+# git checkout yourbranch
+# git merge main
