@@ -6,6 +6,7 @@ const crypto = require('crypto');
 const https = require('https');
 const fs = require('fs');
 const req = require('express/lib/request');
+const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 const port = 443;
@@ -27,7 +28,7 @@ app.post('/login',(req,res) => {
     //     res.status(401); // Unauthorized
     //     res.send('invalid user')
     // }
-    res.send('');
+    res.send(uuidv4());
 })
 app.post('/createuser',(req,res) => {
     // MongoDB implementation to create user
@@ -35,7 +36,8 @@ app.post('/createuser',(req,res) => {
 
 https.createServer({
     key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.cert')
+    cert: fs.readFileSync('server.cert'), 
+    passphrase: "P@ssw0rd"
   }, app).listen(443, () => {
     console.log(`Server started at https://localhost:${port}`)
   })
