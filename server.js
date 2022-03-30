@@ -1,4 +1,4 @@
-//NodeJS REST API using the 'express' library
+// CIT 270 Team Final - Reactless MERN Stack API
 
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -8,8 +8,6 @@ const fs = require('fs');
 const req = require('express/lib/request');
 const app = express();
 const port = 443;
-
-app.use(express.static('public'));
 
 app.use(bodyParser.json());
 
@@ -39,7 +37,7 @@ app.post('/createuser',(req,res) => {
 })
 
 https.createServer({
-    key: fs.readFileSync('private.key'),
+    key: fs.readFileSync('server.key'),
     cert: fs.readFileSync('server.cert')
   }, app).listen(443, () => {
     console.log(`Server started at https://localhost:${port}`)
