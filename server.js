@@ -8,7 +8,7 @@ const fs = require('fs');
 const req = require('express/lib/request');
 
 const app = express();
-const port = 443;
+const port = 4443;
 
 app.use(bodyParser.json());
 
@@ -41,6 +41,6 @@ https.createServer({
     key: fs.readFileSync('server.key'),
     cert: fs.readFileSync('server.cert'), 
     passphrase: "P@ssw0rd"
-  }, app).listen(443, () => {
+  }, app).listen(4443, () => {
     console.log(`Server started at https://localhost:${port}`)
   })
