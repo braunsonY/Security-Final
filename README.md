@@ -4,21 +4,21 @@ A reactless MERN Stack Login API written for CIT 270
 
 # GitHub Commands
 
-git pull
-git add .
-git checkout -b branchname
-git commit -m "commit message here"
-git push
+git pull<br />
+git add .<br />
+git checkout -b branchname<br />
+git commit -m "commit message here"<br />
+git push<br /><br />
 
-git branch
-git checkout main
-git pull 
-git branch -d branchname
+git branch<br />
+git checkout main<br />
+git pull <br />
+git branch -d branchname<br />
 
-git pull
-git checkout yourbranch
-git merge main
+git pull<br />
+git checkout yourbranch<br />
+git merge main<br /><br />
 
-git add .
-git commit -m "Changes made ..."
-git push -u origin yourbranch
+git add .<br />
+git commit -m "Changes made ..."<br />
+git push -u origin yourbranch<br />
