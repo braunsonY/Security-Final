@@ -51,13 +51,8 @@ app.post('/login',(req,res) => {
       });
 })
 app.post('/register',(req,res) => {
-    // MongoDB implementation to create user
-    var userName = req.body.userName;
-    var email = req.body.email;
     var password = req.body.password;
     var vpassword = req.body.verifyPassword;
-    var accountType = req.body.accountType;
-    var phone = req.body.phone;
 
     //Compare the password with the verify password to determine whether to make the connection
     if (password == vpassword) {
