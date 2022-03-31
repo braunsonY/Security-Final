@@ -12,6 +12,8 @@ const { v4: uuidv4 } = require('uuid');
 const app = express();
 const port = 4443;
 
+app.use(express.static('public'));
+
 //All The MongoDB's are belong to us
 const MongoClient = require('mongodb').MongoClient;
 const uri = 'mongodb+srv://cit270:ComeComeY3S4ints!@db.sbotv.mongodb.net/db?retryWrites=true&w=majority';
