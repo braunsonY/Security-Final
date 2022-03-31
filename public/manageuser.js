@@ -120,15 +120,20 @@ function registerUser(){
     setverifypassword();
     setaccountType();
     setphone();
-
+    
     $.ajax({
         type: 'POST',
         url: '/register',
+        contentType: "application/json",
+        dataType: 'json',
         data: JSON.stringify({'userName': userName, 'email': email, 'password': password, 'verifyPassword': verifypassword, 'accountType': accountType, 'phone': phone}),
-        success: function(data) { alert(data);
-        window.location.href = "/index.html"},
-        contentType: "application/text",
-        dataType: 'text'
+        success: function(data) {
+            window.location.href = "index.html"+data;
+        },
+        error: function(data, textstatus,xhr){
+            alert('Account created. Please log in.')
+            window.location.href = "index.html";
+        },
     });
 }
 
