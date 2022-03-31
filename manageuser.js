@@ -29,15 +29,15 @@ function setverifypassword(){
 }
 
 function setaccount(){
-
+    account = $("#account").val();
 }
 
 function setemail(){
-    
+    email = $("#email").val();
 }
 
 function setphone(){
-
+    phone = $("#phone").val();
 }
 
 function savetoken(token){
