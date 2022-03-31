@@ -31,6 +31,9 @@ function setverifypassword(){
 function setaccount(){
     account = $("#account").val();
 }
+function setaccountType() {
+    accountType = $("#accountType").val();
+}
 
 function setemail(){
     email = $("#email").val();
@@ -110,14 +113,19 @@ function createbutton(){
 }
 
 
-function createuser(){
+function registerUser(){
+    setusername();
+    setemail();
+    setuserpassword();
+    setverifypassword();
+    setaccountType();
+    setphone();
+
     $.ajax({
         type: 'POST',
-        url: '/user',
-        data: JSON.stringify({userName, 'email': userName, password, 'verifyPassword': vpwd, 'accountType':'Personal'}),//we are using the email as the user name
+        url: '/register',
+        data: JSON.stringify({'userName': userName, 'email': email, 'password': password, 'verifyPassword': verifypassword, 'accountType': accountType, 'phone': phone}),
         success: function(data) { alert(data);
-//        readonlyforms("newUser");
-//        alert(readonlyforms("newUser"));
         window.location.href = "/index.html"},
         contentType: "application/text",
         dataType: 'text'

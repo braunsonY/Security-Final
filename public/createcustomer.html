@@ -19,28 +19,30 @@
             </p>
             <p>
                 <label class="stepcount" for="username">Email Address</label><br>
-                <input class="stepcount" type="text" id="emailaddress" name="emailaddress" size="25" onchange="setemail()" required >
+                <input class="stepcount" type="text" id="email" name="email" size="25" onchange="setemail()" required >
             </p>
             <p>
                 <label class="stepcount" for="password">Password</span></label><br>
-                <input class="stepcount" type="password" id="password" name="pwd" size="25" onchange="setuserpassword()" required >
+                <input class="stepcount" type="password" id="password" name="password" size="25" onchange="setuserpassword()" required >
             </p>
             <p>
                 <label class="stepcount" for="verifypassword">Verify password</span></label><br>
-                <input class="stepcount" type="password" id="password" name="pwd" size="25" onchange="setverifypassword()" required >
+                <input class="stepcount" type="password" id="verifypassword" name="verifypassword" size="25" onchange="setverifypassword()" required >
             </p>
             <p>
                 <label class="stepcount" for="account">Account type</label><br>
-                <input class="stepcount" type="text" id="account" name="account" size="25" onchange="setaccount()" required >
+                <input class="stepcount" type="text" id="accountType" name="accountType" size="25" onchange="setaccount()" required >
             </p>
             <p>
                 <label class="stepcount" for="phone">Phone Number</label><br>
-                <input class="stepcount" type="text" id="phonenumber" name="phonenumber" size="25" onchange="setphone()" required >
+                <input class="stepcount" type="text" id="phone" name="phone" size="25" onchange="setphone()" required >
             </p>
             <p>
-                <input class="btn btn-lg btn-primary" id="loginbtn" type="button" onclick="userlogin()" value="Login">
+                <input class="btn btn-lg btn-primary" id="loginbtn" type="button" onclick="registerUser()" value="Register">
             </p>
         </form>
     </div>
     </body>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="manageuser.js"></script>
 </html>
