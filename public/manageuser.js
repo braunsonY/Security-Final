@@ -7,7 +7,7 @@ let email = "";
 let acccount = "";
 let phone = "";
 
-let passwordRegEx=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%!]).{6,40})/;
+let passwordRegEx=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[*@#$%!]).{6,40})/;
 
 function setusername(){
     userName = $("#username").val();
