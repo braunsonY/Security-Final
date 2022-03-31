@@ -1,0 +1,8 @@
+{
+    "userName": "admin",
+    "email": "admin@admin.net",
+    "password":"Test@test123",
+    "verifyPassword":"Test@test123",
+    "accountType": "Personal",
+    "phone": "801-719-0909"
+}
