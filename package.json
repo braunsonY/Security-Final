@@ -15,7 +15,9 @@
     "fs": "^0.0.1-security",
     "https": "^1.0.0",
     "mongodb": "^4.4.1",
+    "mongoose": "^6.2.9",
     "node": "^17.7.1",
+    "npm-cli": "^0.1.0",
     "parser": "^0.1.4"
   }
 }
