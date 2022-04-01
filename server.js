@@ -19,7 +19,7 @@ app.use(express.static('public'));
 //All The MongoDB's are belong to us
 const MongoClient = require('mongodb').MongoClient;
 const uri = 'mongodb+srv://cit270:ComeComeY3S4ints!@db.sbotv.mongodb.net/db?retryWrites=true&w=majority';
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri, { useNewUrlParser: true }); console.log("connected to database");
 
 
 app.use(bodyParser.json());
@@ -63,6 +63,7 @@ app.post('/register',(req,res) => {
     if (password == vpassword) {
         password = crypto.createHash('sha256').update(password).digest('hex')
 
+        try{
         MongoClient.connect(uri, function(err, db) {
             if (err) throw err;
             var dbo = db.db("accounts");
@@ -74,6 +75,9 @@ app.post('/register',(req,res) => {
             console.log(req.body.userName + " made an account.");
             res.status(200).send('Account created, please log in.')
           });
+        }catch(error){
+          console.log(error)
+        }
     }
 })
 
