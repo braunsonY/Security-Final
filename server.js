@@ -6,6 +6,7 @@ const crypto = require('crypto');
 const https = require('https');
 const fs = require('fs');
 const req = require('express/lib/request');
+var mongo = require('mongodb');
 
 const { v4: uuidv4 } = require('uuid');
 
@@ -19,6 +20,7 @@ app.use(express.static('public'));
 const MongoClient = require('mongodb').MongoClient;
 const uri = 'mongodb+srv://cit270:ComeComeY3S4ints!@db.sbotv.mongodb.net/db?retryWrites=true&w=majority';
 const client = new MongoClient(uri, { useNewUrlParser: true });
+
 
 app.use(bodyParser.json());
 
