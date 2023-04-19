@@ -4,10 +4,10 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN apk add python3
 
 COPY . .
 
 EXPOSE 3000
 
-CMD ["npm","start"]
+CMD ["python3","flaskServer.py"]
